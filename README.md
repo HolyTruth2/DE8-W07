@@ -3,7 +3,7 @@
 ## 8기 이성진
 
 ## 실습 환경
-Windows 11에서 Docker로 Airflow와 Spark를 실행했다.
+Docker 컨테이너에서 Airflow와 Spark 실습 환경을 구성했다.
 
 ## 회고
-Airflow로 작업을 순서대로 실행하는 방법을 배웠다.
+Airflow의 작업 의존성과 재시도 설정을 배웠다.
