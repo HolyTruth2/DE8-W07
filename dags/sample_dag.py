@@ -1,5 +1,3 @@
-import q3_missing_module
-
 from pendulum import datetime
 from airflow import DAG
 from airflow.operators.empty import EmptyOperator
