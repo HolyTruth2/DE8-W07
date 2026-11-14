@@ -1,0 +1,21 @@
+name: week7-spark
+
+services:
+  spark-master:
+    image: apache/spark:3.5.4-python3
+    hostname: spark-master
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master --host spark-master
+    ports:
+      - "127.0.0.1:8082:8080"
+    volumes:
+      - ./jobs:/opt/spark/jobs
+      - ./data:/opt/spark/data
+
+  spark-worker:
+    image: apache/spark:3.5.4-python3
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker --cores 2 --memory 1g spark://spark-master:7077
+    depends_on:
+      - spark-master
+    volumes:
+      - ./jobs:/opt/spark/jobs
+      - ./data:/opt/spark/data
