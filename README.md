@@ -3,7 +3,7 @@
 ## 8기 이성진
 
 ## 실습 환경
-Windows 11에서 Docker로 Airflow와 Spark를 실행했다.
+Windows 11과 Docker Desktop을 사용해 데이터 처리 환경을 구성했다.
 
 ## 회고
-Airflow로 작업을 순서대로 실행하는 방법을 배웠다.
+S3 다운로드부터 Spark 변환과 업로드까지 연결하는 방법을 배웠다.
